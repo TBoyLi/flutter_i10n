@@ -67,6 +67,7 @@ class DarkThemeWidget extends StatelessWidget {
     );
   }
 
+  ///切换黑夜模式
   void switchDarkMode(BuildContext context) {
     if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
       showToast("检测到系统为暗黑模式,已为你自动切换", position: ToastPosition.bottom);

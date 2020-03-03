@@ -8,7 +8,7 @@ class LocaleModel extends ChangeNotifier {
   static const localeValueList = ['', 'zh-CN', 'en'];
 
   ///本地语言选择的 key值
-  static const keyLocaleIndex = 'keyLocaleIndex';
+  static const kLocaleIndex = 'kLocaleIndex';
 
   int _localeIndex;
 
@@ -24,13 +24,13 @@ class LocaleModel extends ChangeNotifier {
   }
 
   LocaleModel() {
-    _localeIndex = StorageManager.sharedPreferences.getInt(keyLocaleIndex) ?? 0;
+    _localeIndex = StorageManager.sharedPreferences.getInt(kLocaleIndex) ?? 0;
   }
 
   switchLocale(int index) {
     _localeIndex = index;
     notifyListeners();
-    StorageManager.sharedPreferences.setInt(keyLocaleIndex, index);
+    StorageManager.sharedPreferences.setInt(kLocaleIndex, index);
   }
 
   static String localeName(index, context) {
