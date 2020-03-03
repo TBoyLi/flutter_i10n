@@ -6,6 +6,8 @@
 
 [Flutter实战 第十三章：国际化](https://book.flutterchina.club/chapter13/)
 
+## 要点
+
 ## 源码
 
 [我在这里~ ~ ~](https://github.com/TBoyLi/flutter_i10n)
