@@ -1,0 +1,49 @@
+name: i10n_app
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #国际化配置 1
+  flutter_localizations:
+    sdk: flutter
+ 
+  cupertino_icons: ^0.1.2
+
+  provider: ^4.0.4
+
+  shared_preferences: ^0.5.3+5
+  # 本地json对象存储
+  localstorage: ^2.0.0
+  oktoast: ^2.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #  - images/a_dot_burr.jpeg
+  #  - images/a_dot_ham.jpeg
+
+  fonts:
+    - family: iconfont
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+    - family: kuaile # 站酷 快乐字体  https://fonts.google.com/?selection.family=Noto+Sans+SC&subset=chinese-simplified
+      fonts:
+        - asset: assets/fonts/ZCOOLKuaiLe-Regular.ttf
+
+#国际化配置 2
+flutter_intl:
+  enabled: true
