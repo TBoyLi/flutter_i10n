@@ -109,7 +109,7 @@ class ColorThemeWidget extends StatelessWidget {
               }).toList(),
               Material(
                 child: InkWell(
-                  onTap: () => Provider.of<ThemeModel>(context)
+                  onTap: () => Provider.of<ThemeModel>(context, listen: false)
                       .switchRandomTheme(
                           brightness: Theme.of(context).brightness),
                   child: Container(

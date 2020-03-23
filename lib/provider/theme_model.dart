@@ -56,7 +56,6 @@ class ThemeModel with ChangeNotifier {
   }
 
   /// 随机一个主题色彩
-  ///
   /// 可以指定明暗模式,不指定则保持不变
   void switchRandomTheme({Brightness brightness}) {
     int colorIndex = Random().nextInt(Colors.primaries.length - 1);

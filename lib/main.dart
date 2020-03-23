@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
     return OKToast(
       child: MultiProvider(
         providers: <SingleChildWidget>[
-          ChangeNotifierProvider.value(value: ThemeModel()),
-          ChangeNotifierProvider.value(value: LocaleModel()),
+          ChangeNotifierProvider.value(value: ThemeModel()),//主题 provider
+          ChangeNotifierProvider.value(value: LocaleModel()),//本地语种 provider
         ],
         child: Consumer2<ThemeModel, LocaleModel>(
           builder:
@@ -41,12 +41,12 @@ class MyApp extends StatelessWidget {
               darkTheme: themeModel.themeData(platformDarkMode: true),
               locale: localeModel.locale,
               localizationsDelegates: [
-                S.delegate,
+                S.delegate,//支持语种对应的字段
                 GlobalCupertinoLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate
               ],
-              supportedLocales: S.delegate.supportedLocales,
+              supportedLocales: S.delegate.supportedLocales, //支持的语种
               //路由自行配置 flutter自带 或者 fluro
               onGenerateRoute: null,
               home: Home(),
